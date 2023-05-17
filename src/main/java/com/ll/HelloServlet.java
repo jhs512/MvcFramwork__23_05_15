@@ -14,10 +14,12 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        resp.setContentType("text/html; charset=UTF-8");
+
         try {
             resp.getWriter()
-                    .append("Hello, Servlet!!")
-                    .append("\n")
+                    .append("Hello, <span style='color:red;'>Servlet</span>!!??")
+                    .append("<br>")
                     .append(new Person(1, "Paul").toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
