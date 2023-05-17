@@ -17,4 +17,9 @@ public class HelloServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        doGet(req, resp);
+    }
 }
