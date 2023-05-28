@@ -43,7 +43,7 @@ public class ConnectionPool {
 
         Connection connection = null;
 
-        String url = "jdbc:mariadb://" + host + ":" + port + "/" + dbName
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + dbName
                 + "?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeBehavior=convertToNull";
         try {
             connection = DriverManager.getConnection(url, username, password);
@@ -56,7 +56,7 @@ public class ConnectionPool {
 
     private void loadDriver() {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             throw new MyMapException(e);
         }
