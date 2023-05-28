@@ -19,6 +19,11 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
 
     implementation 'org.eclipse.jetty:apache-jstl:11.0.0'
+
+    implementation 'org.reflections:reflections:0.10.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.1'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:3.1.4'
 }
 
 test {
